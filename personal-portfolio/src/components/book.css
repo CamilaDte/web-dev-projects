@@ -1,0 +1,34 @@
+.flip-book {
+    position: relative;
+    perspective: 1000px;
+    margin: 0 auto;
+  }
+  
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .page.flipping {
+    transform: rotateY(180deg);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+  }
